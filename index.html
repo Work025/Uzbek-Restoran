@@ -17,7 +17,6 @@
             <source src="./content.mp4" type="video/mp4">
             Sizning brauzeringiz videoni qo‘llab-quvvatlamaydi.
         </video>
-
         <div class="header">
             <ul class="header-ul">
                 <li><a href="">Главная</a></li>
@@ -27,9 +26,13 @@
                 <li><a href="">Контакты</a></li>
             </ul>
             <div class="header-btn">
-                <button><i class="fa-solid fa-phone"></i> Написать в whatsapp</button>
+                <button><i class="fa-solid fa-phone"></i> <p>Написать в whatsapp</p></button>
+            </div>
+            <div class="burger" id="burger">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
+
 
         <div class="section">
             <div class="section-itm">
@@ -132,6 +135,11 @@
         document.getElementById('scrollToContent').addEventListener('click', function () {
             document.getElementById('content').scrollIntoView({ behavior: 'smooth' });
         });
+
+        document.getElementById('burger').addEventListener('click', function () {
+            document.querySelector('.header-ul').classList.toggle('active');
+        });
+
 
         window.addEventListener("scroll", function () {
             const header = document.querySelector(".header");
