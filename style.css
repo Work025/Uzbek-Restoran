@@ -8,7 +8,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .bg-video {
@@ -74,6 +74,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    p {
+        display: block;
+    }
 }
 
 .header-btn button {
@@ -357,4 +361,178 @@ html {
     justify-content: center;
     background-color: #0000b8;
     color: #fff;
+}
+
+.burger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 1200px dan kichik ekranlar uchun */
+@media (max-width: 1200px) {
+    .content {
+        padding: 100px 100px 0 100px;
+    }
+
+    .header {
+        padding: 0 100px;
+    }
+}
+
+/* 992px dan kichik ekranlar uchun (planshetlar) */
+@media (max-width: 992px) {
+    .header-ul {
+        gap: 20px;
+    }
+
+    .section-itm {
+        width: 90%;
+    }
+
+    .main-top,
+    .main-bottom {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main-top div,
+    .main-bottom div {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-text,
+    .bottom-text {
+        padding: 20px;
+    }
+
+    .article {
+        padding: 40px 30px;
+        height: auto;
+    }
+
+    .active {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* 768px dan kichik ekranlar uchun (mobil telefonlar) */
+@media (max-width: 768px) {
+    .header {
+        padding: 25px;
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header-ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        gap: 15px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    .header-ul.active {
+        display: flex;
+    }
+
+    .header-btn {
+        width: 80%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .itm-h1 {
+        font-size: 30px;
+    }
+
+    .itm-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .about {
+        height: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .powers img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-about {
+        padding: 60px 20px;
+    }
+
+    .top-text p,
+    .bottom-text p {
+        font-size: 15px;
+    }
+
+    .article h1 {
+        font-size: 24px;
+    }
+
+    .div img {
+        width: 100%;
+    }
+
+    .section-itm {
+        gap: 15px;
+    }
+
+    .itm-h1 {
+        font-size: 28px;
+    }
+}
+
+/* 576px dan kichik (kichik mobil) */
+@media (max-width: 576px) {
+    .header-btn button {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .header-btn button i {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header-btn button p {
+        display: none;
+    }
+
+    .itm-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about h1,
+    .article h1 {
+        font-size: 22px;
+    }
+
+    .footer-about h1 {
+        font-size: 20px;
+    }
+
+    .top-text h1,
+    .bottom-text h1 {
+        font-size: 24px;
+    }
+
+    .top-text hr,
+    .bottom-text hr {
+        width: 60px;
+    }
 }
